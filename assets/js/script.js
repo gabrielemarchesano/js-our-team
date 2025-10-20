@@ -44,8 +44,12 @@ const teamMembers = [
 //Seleziono il nodo della riga
 const rowElement = document.querySelector("#members .row")
 
+let items = "";
+
 for (let i = 0; i < teamMembers.length; i++) {
+  //Salvo l'elemento singolo(in questo caso l'oggetto)
   const member = teamMembers[i];
+  //Destrutturo l'oggetto salvando le sue keys in delle variabili omonime
   const {name, role, email, img} = member;
   //Salvo in una variabile il markup per creare una colonna con la card
   const markup = `
@@ -66,7 +70,11 @@ for (let i = 0; i < teamMembers.length; i++) {
     </div>
   </div>
   `
-
-  console.log(markup);  
+  
+  items += markup;
+  //console.log(markup);  
 }
 
+//console.log(items);
+//Modifico l'html dell'elemento riga con i membri dell'array
+rowElement.innerHTML = items;
