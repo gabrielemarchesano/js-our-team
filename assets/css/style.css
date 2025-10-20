@@ -3,7 +3,7 @@ body{
 }
 
 .card{
-  max-height: auto;
+  max-height: 200px;
   background-color: black;
   color: white;
 }
