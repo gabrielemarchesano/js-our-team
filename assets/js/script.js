@@ -41,25 +41,32 @@ const teamMembers = [
   }
 ];
 
-//Salvo in una variabile il markup per creare una colonna con la card
-const markup = `
-<div class="col">
-  <div class="card rounded-0">
-    <div class="row g-0">
-      <div class="col-4">
-        <img src="https://picsum.photos/500/500" alt="" id="cardImg" class="img-fluid">
-      </div>
-      <div class="col-8">
-        <div class="card-body">
-          <h5 id="fullName" class="card-title"></h5>
-          <p id="role" class="card-text"></p>
-          <a id="mail" class="card-text"></a>
+//Seleziono il nodo della riga
+const rowElement = document.querySelector("#members .row")
+
+for (let i = 0; i < teamMembers.length; i++) {
+  const member = teamMembers[i];
+  const {name, role, email, img} = member;
+  //Salvo in una variabile il markup per creare una colonna con la card
+  const markup = `
+  <div class="col">
+    <div class="card rounded-0">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="./assets/${img}" alt="" id="cardImg" class="img-fluid">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 id="fullName" class="card-title">${name}</h5>
+            <p id="role" class="card-text">${role}</p>
+            <a id="mail" class="card-text">${email}</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-`
-//Seleziono il nodo della riga
-const rowElement = document.querySelector("#members .row")
+  `
+
+  console.log(markup);  
+}
 
