@@ -60,9 +60,9 @@ for (let i = 0; i < teamMembers.length; i++) {
           <img src="./assets/${img}" alt="" id="cardImg" class="img-fluid">
         </div>
         <div class="col-8">
-          <div class="card-body">
+          <div class="card-body pb-0">
             <h5 id="fullName" class="card-title">${name}</h5>
-            <p id="role" class="card-text">${role}</p>
+            <p id="role" class="card-text mb-0">${role}</p>
             <a id="mail" class="card-text">${email}</a>
           </div>
         </div>
@@ -70,7 +70,7 @@ for (let i = 0; i < teamMembers.length; i++) {
     </div>
   </div>
   `
-  
+
   items += markup;
   //console.log(markup);  
 }

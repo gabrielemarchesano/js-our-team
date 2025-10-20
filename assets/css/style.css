@@ -1,0 +1,18 @@
+body{
+  font-family: "Parkinsans", sans-serif;
+}
+
+.card{
+  max-height: auto;
+  background-color: black;
+  color: white;
+}
+
+.card-title{
+  font: 21px bold;
+  text-transform: uppercase;
+}
+
+#title{
+  color: rgb(249, 14, 100);
+}
